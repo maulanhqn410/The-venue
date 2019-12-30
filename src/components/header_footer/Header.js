@@ -8,7 +8,7 @@ import SideDrawer from "./SideDrawer";
 export default class Header extends Component {
   state = {
     drawerOpen: false,
-    headerShower: true
+    headerShower: false
   };
 
   toggleDrawer(value) {
@@ -24,11 +24,11 @@ export default class Header extends Component {
   handleCroll = () => {
     if(window.scrollY > 0){
       this.setState({
-        headerShower: false
+        headerShower: true
       })
     } else{
       this.setState({
-        headerShower: true
+        headerShower: false
       })
     }
   }
